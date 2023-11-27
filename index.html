@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumSys</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/logic.js" defer></script>
+</head>
+<body>
+    <div class="main">
+        <div class="main_window">
+
+            <div class="input_tuple">
+                <div id="file">
+                    <button>ФАЙЛ</button>
+                </div>
+    
+                <div class="input">
+                    <input type='text' placeholder="Введите число">
+                </div>
+            </div>
+                <div class="table">
+                    <div class="header_table">
+                        <p>Его система счисления</p>
+                        <p>Перевести в</p>
+                    </div>
+
+                    <div class="tuple">
+                        <div class="tuple_block">
+                            <p>Двоичная</p>
+                            <p><input type="radio" name="1" value="2"></p>
+                        </div>
+                        <div class="tuple_block">
+                            <p><input type="radio" name="2" value="2"></p>
+                            <p>Двоичная</p>
+                            
+                        </div>
+                    </div>
+                    <div class="tuple">
+                        <div class="tuple_block">
+                            <p>Восьмеричная</p>
+                            <p><input type="radio" name="1" value="8"></p>
+                        </div>
+                        <div class="tuple_block">
+                            <p><input type="radio" name="2" value="8"></p>
+                            <p>Восьмеричная</p>
+                        </div>
+                    </div>
+                    <div class="tuple">
+                        <div class="tuple_block">
+                            <p>Десятичная</p>
+                            <p><input type="radio" name="1" value="10"></p>
+                        </div>
+                        <div class="tuple_block">
+                            <p><input type="radio" name="2" value="10"></p>
+                            <p>Десятичная</p>
+                        </div>
+                    </div>
+                    <div class="tuple">
+                        <div class="tuple_block">
+                            <p>Шестнадцатиричная</p>
+                            <p><input type="radio" name="1" value="16"></p>
+                        </div>
+                        <div class="tuple_block">
+                            <p><input type="radio" name="2" value="16"></p>
+                            <p>Шестнадцатиричная</p>
+                            
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div class="button">
+                    <button id="calculate">ПЕРЕВЕСТИ</button>
+                </div>
+                <br>
+                <div class="button">
+                    <button>СОХРАНИТЬ</button>
+                </div>
+                <br>
+                <div class="result">
+                    <p>Результат</p>
+                </div>
+                <br>
+                <div class="output">
+                    <p></p>
+                </div>
+            
+
+        </div>
+    </div>
+</body>
+</html>

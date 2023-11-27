@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.main_window {
+    height: 450px;
+    width: 650px;
+    border: 2px solid rgba(0, 0, 0, 0.533);
+    border-radius: 10px;
+    margin: 100px;
+    padding: 50px;
+    text-align: center;
+}
+
+#file button{
+    width: 80px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.input_tuple {
+    display: flex;
+    justify-content: center;
+    margin-right: 100px;
+}
+
+.input input{
+    margin: 10px;
+    padding: 5px;
+    width: 250px;
+}
+
+.table {
+    text-align: center;
+}
+
+.header_table {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-right: 75px;
+}
+
+.tuple {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 10px;
+}
+
+.tuple_block {
+    display: flex;
+    gap: 5px;
+}
+
+.button button{
+    padding: 5px;
+    width: 264px;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+
+}
+
+.result p  {
+    border-bottom: 2px solid black;
+    padding: 5px;
+}
+
+
+
+
+
+
