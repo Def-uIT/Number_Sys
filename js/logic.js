@@ -52,6 +52,19 @@ function getRadioValue(radioName) {
     }
 }
 
+const saveButton = document.querySelector('#saveButton')
+
+saveButton.addEventListener('click', () => {
+    const data = res
+    const el = document.createElement('a')
+    el.setAttribute('href', `data:text/plain;charset=utf-8,${encodeURIComponent(data)}`)
+    el.setAttribute('download', 'результат.txt')
+    document.body.appendChild(el);
+    el.click();
+    document.body.removeChild(el);
+})
+
+
 
 
 
