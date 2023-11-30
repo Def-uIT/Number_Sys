@@ -1,4 +1,28 @@
 
+const input_file = document.querySelector('.file input');
+const button_file = document.querySelector('.file button');
+
+input_file.style.opacity = 0;
+
+
+button_file.addEventListener('click', () => {
+
+    input_file.click()
+
+    input_file.addEventListener('change', (e) => {
+        if (!input_file.files?.[0]) return
+
+        const reader = new FileReader()
+        reader.onload = (e) => {
+            document.querySelector('.input input').value = reader.result
+        }
+        reader.readAsText(input_file.files[0])
+
+    })
+
+})
+
+
 const calculate = document.querySelector('#calculate');
 calculate.addEventListener('click', () => {
     
@@ -28,32 +52,9 @@ function getRadioValue(radioName) {
     }
 }
 
-const input_file = document.querySelector('.file input');
-const button_file = document.querySelector('.file button');
 
-input_file.style.opacity = 0;
 
-button_file.addEventListener('click', () => {
 
-    input_file.click()
-
-    input_file.addEventListener('change', () => {
-
-        file = input_file.files[0]
-
-        createText(file)
-    })
-
-})
-
-const createText = text => {
-
-    const reader = new FileReader()
-
-    reader.readAsText(text, 'windows-1251')
-
-    reader.onload = () => document.body.innerHTML = `<p><pre>${reader.result}</pre></p>`
-}
 
 
 
