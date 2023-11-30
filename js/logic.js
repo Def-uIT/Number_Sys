@@ -7,7 +7,7 @@ calculate.addEventListener('click', () => {
     const endingRadio = document.querySelectorAll('.tuple_block p input[name="2"]');
     endingSystem = getRadioValue(endingRadio);
 
-    const input_num = document.querySelector('input').value;
+    const input_num = document.querySelector('.input input').value;
     res = convert(input_num, startingSystem, endingSystem);
 
     const output = document.querySelector('.output p');
@@ -27,4 +27,37 @@ function getRadioValue(radioName) {
         }
     }
 }
+
+const input_file = document.querySelector('.file input');
+const button_file = document.querySelector('.file button');
+
+input_file.style.opacity = 0;
+
+button_file.addEventListener('click', () => {
+
+    input_file.click()
+
+    input_file.addEventListener('change', () => {
+
+        file = input_file.files[0]
+
+        createText(file)
+    })
+
+})
+
+const createText = text => {
+
+    const reader = new FileReader()
+
+    reader.readAsText(text, 'windows-1251')
+
+    reader.onload = () => document.body.innerHTML = `<p><pre>${reader.result}</pre></p>`
+}
+
+
+
+
+
+
 

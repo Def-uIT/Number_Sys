@@ -18,26 +18,31 @@
     text-align: center;
 }
 
-#file button{
-    width: 80px;
-    padding: 5px;
-    margin: 10px;
-}
-
 .input_tuple {
     display: flex;
     justify-content: center;
     margin-right: 100px;
+} 
+
+.file {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file input {
+    height: 1px;
+    width: 1px;
+}
+
+.file button {
+    padding: 5px 10px;
 }
 
 .input input{
     margin: 10px;
     padding: 5px;
     width: 250px;
-}
-
-.table {
-    text-align: center;
 }
 
 .header_table {
@@ -74,8 +79,6 @@
     border-bottom: 2px solid black;
     padding: 5px;
 }
-
-
 
 
 
