@@ -1,9 +1,15 @@
-
 const input_file = document.querySelector('.file input');
 const button_file = document.querySelector('.file button');
-let output = document.querySelector('.output p');
 input_file.style.opacity = 0;
 
+document.querySelector('.input input').value = ''
+
+let output = document.querySelector('.output p');
+
+const defaultStartingRadio = document.querySelector('.tuple_block p input[name="1"][value="10"]');
+const defaultEndingRadio = document.querySelector('.tuple_block p input[name="2"][value="2"]');
+defaultStartingRadio.click()
+defaultEndingRadio.click()
 
 button_file.addEventListener('click', () => {
 
@@ -33,38 +39,39 @@ calculate.addEventListener('click', () => {
     const endingRadio = document.querySelectorAll('.tuple_block p input[name="2"]');
     endingSystem = getRadioValue(endingRadio);
 
-    // if (startingSystem || endingSystem == 'undefined') {
-    //     alert("Пожалуйста, выберите системы счисления чисел")
-    // }
-
     const input_num = document.querySelector('.input input').value;
     res = convert(input_num, startingSystem, endingSystem);
 
     output.textContent = res.toUpperCase();
 
     if (output.textContent == 'NAN') {
-        switch (startingSystem) {
-            case '2':
-                alert("Двоичное число принимает на вход только цифры 0 и 1")
-                clearOutput()
-                break
-            case '8':
-                alert("Восьмеричное число принимает на вход только цифры (0-7)")
-                clearOutput()
-                break
-            case '10':
-                alert("Десятичное число принимает на вход только цифры (0-9)")
-                clearOutput()
-                break
-            case '16':
-                alert("Шестнадцатиричное число принимает на вход только цифры (0-9), а также буквы из латинского алфавита (A-F)")
-                clearOutput()
-                break
-            default:
-                alert("Пожалуйста, введите число")
-                clearOutput()
-                break
-        }
+        if (document.querySelector('.input input').value == '') {
+            alert("Пожалуйста, введите число")
+            clearOutput()
+        }   else {
+                switch (startingSystem) {
+                    case '2':
+                        alert("Двоичное число принимает на вход только цифры 0 и 1")
+                        clearOutput()
+                        break
+                    case '8':
+                        alert("Восьмеричное число принимает на вход только цифры (0-7)")
+                        clearOutput()
+                        break
+                    case '10':
+                        alert("Десятичное число принимает на вход только цифры (0-9)")
+                        clearOutput()
+                        break
+                    case '16':
+                        alert("Шестнадцатиричное число принимает на вход только цифры (0-9), а также буквы из латинского алфавита (A-F)")
+                        clearOutput()
+                        break
+                    default:
+                        alert("Пожалуйста, введите число")
+                        clearOutput()
+                        break
+                }
+            }
     }
 
     function convert(input_num, startingSystem, endingSystem) {
