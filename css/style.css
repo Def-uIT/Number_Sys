@@ -1,6 +1,10 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: inherit;
+    color:#ddd;
+    background-color: #222831;
 }
 
 .main {
@@ -16,6 +20,7 @@
     margin: 100px;
     padding: 50px;
     text-align: center;
+    border:2px solid aliceblue;
 }
 
 .input_tuple {
@@ -37,6 +42,7 @@
 
 .file button {
     padding: 5px 10px;
+    cursor: pointer;
 }
 
 .input input{
@@ -49,7 +55,8 @@
     display: flex;
     gap: 20px;
     justify-content: center;
-    padding-right: 75px;
+    padding-right: 100px;
+    font-size: 20px;
 }
 
 .tuple {
@@ -62,11 +69,27 @@
 .tuple_block {
     display: flex;
     gap: 5px;
+    filter: grayscale(100%);
 }
 
 .button button{
     padding: 5px;
     width: 264px;
+    background-color: #393e46;
+    border-radius: 5px;
+    color:aliceblue;
+    font-weight: bold;
+    border: 2px solid aliceblue;
+    cursor: pointer;
+
+}
+
+.button button:hover,
+#saveButton:hover,
+.file button:hover {
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #575e6b;
 }
 
 .result {
@@ -76,8 +99,12 @@
 }
 
 .result p  {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid aliceblue;
     padding: 5px;
+}
+
+.output{
+    font-size: 24px;
 }
 
 
